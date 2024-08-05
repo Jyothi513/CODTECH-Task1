@@ -14,7 +14,9 @@ Mentor:Muzammil Ahmed.
 
 **Overview of the project**
 
-Project:Digital Logic Design With Verilog
+Project:Digital Logic Design With Verilog.
+
+TOOL USED:EDA Playground.
 
 ![Screenshot (177)](https://github.com/user-attachments/assets/44dd7116-b1ce-44e6-aef7-a4f13725f9c5)
 
