@@ -32,7 +32,12 @@ The code was implemented using behavioral modelling using always statement which
 The OR operation has been used and the outputs sum and cout are concatenated using concatenation operator(,). 
 In TESTBENCH the dumpfile and dumpvars are used to obatain the wvaeform. and $monitor is used to print the outputs as the input chnages.
 
+Objective:Multiplexer
 
+![Screenshot (181)](https://github.com/user-attachments/assets/0fdcd693-f366-4660-bfb8-f10384460a37)
+
+Multiplexer is a combinational circuit whose output depends only on the present inputs. Multiplexer having 2^n inputs , n sel inputs, 1 output (2^n:n:1)
+Verilog module defines a multiplexer which is having 16 inputs and 1 ouput and 4 select inputs.The code is implemented using datflow modeeling with the assign stament using assign keyword.The output will be obtained based the select inputs.for exam the 4 select inputs are 0000 the the output is i0, for 0110 the output is i6 etc.
 
 
 
