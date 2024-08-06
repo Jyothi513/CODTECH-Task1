@@ -22,7 +22,6 @@ Objective:The objective of this task is to design basic digital logic circuits l
 
 **4bit FULLADDER**
 
-![Screenshot (177)](https://github.com/user-attachments/assets/44dd7116-b1ce-44e6-aef7-a4f13725f9c5)
 
 inputs:a, b, cin
 
@@ -34,21 +33,23 @@ The code was implemented using behavioral modelling using always statement which
 The OR operation has been used and the outputs sum and cout are concatenated using concatenation operator(,). 
 In TESTBENCH the dumpfile and dumpvars are used to obatain the wvaeform. and $monitor is used to print the outputs as the input chnages.
 
+![Screenshot (177)](https://github.com/user-attachments/assets/44dd7116-b1ce-44e6-aef7-a4f13725f9c5)
+
+
 **MULTIPLEXER**
 
 inputs:in, sel
 
 output:out
 
-![Screenshot (181)](https://github.com/user-attachments/assets/0fdcd693-f366-4660-bfb8-f10384460a37)
 
 Multiplexer is a combinational circuit whose output depends only on the present inputs. Multiplexer having 2^n inputs , n sel inputs, 1 output (2^n:n:1)
 Verilog module defines a multiplexer which is having 16 inputs and 1 ouput and 4 select inputs.The code is implemented using datflow modeeling with the assign stament 
 using assign keyword.The output will be obtained based the select inputs.for exam the 4 select inputs are 0000 the output is i0, for 0110 the output is i6 etc.
 
-**LOGIC GATES**
+![Screenshot (181)](https://github.com/user-attachments/assets/0fdcd693-f366-4660-bfb8-f10384460a37)
 
-![Screenshot (174)](https://github.com/user-attachments/assets/cf896c88-90b8-442c-92a7-0eac23bcde3f)
+**LOGIC GATES**
 
 inputs: i1, i2
 
@@ -63,4 +64,5 @@ verilog module defines all the logic gates. In verilog there are some predefined
   XNOR gate: Performs the xnor operation of i1, i2. If both the inputs are same then the output is logic 1.
   NOT gate: The output is the complement of i1.
 
+![Screenshot (174)](https://github.com/user-attachments/assets/cf896c88-90b8-442c-92a7-0eac23bcde3f)
 
