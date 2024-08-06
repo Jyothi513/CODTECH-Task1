@@ -1,3 +1,4 @@
+//FULLADDER
 // Code your design here
 // 4bit fulladder
 module fulladder(input [3:0] a, b,  
@@ -9,8 +10,6 @@ module fulladder(input [3:0] a, b,
       {cout, sum} = a + b + cin;  
   end  
 endmodule  
-
-
 
 
 // Code your testbench here
@@ -32,5 +31,76 @@ module test;
         begin
         #5  a=$random; b=$random; cin=$random;
         end
+    end
+endmodule
+
+
+
+//MULTIPLEXER
+
+// Code your design here
+// mux
+module mux16to1(in, sel, out);
+  input[15:0] in;
+  input[3:0] sel;
+  output out;
+  assign out = in[sel];
+endmodule
+
+
+// Code your testbench here
+// or browse Examples
+module test;
+  reg[15:0] in;
+  reg[3:0] sel;
+  wire out;
+  mux16to1 MUX(.in(in), .sel(sel), .out(out));
+  initial
+    begin
+      $dumpfile("dump.vcd");
+      $dumpvars(1);
+      $monitor($time, "in=%h, sel=%h, out=%b", in, sel, out);
+      in = 16'h3f0a;  sel = 4'h0;
+      #5 sel = 4'h1;
+      #5 sel = 4'h6;
+      #5 sel = 4'hc;
+      #5 $finish;
+    end
+endmodule
+
+
+
+//LOGICGATES
+
+// Code your design here
+// logic gates using gate level modelling
+module logicgate(o1,o2,o3,o4,o5,o6,o7,i1,i2);
+  input i1,i2;
+  output o1,o2,o3,o4,o5,o6,o7;
+  and g1(o1, i1, i2);
+  or g2(o2, i1, i2);
+  nand g3(o3, i1, i2);
+  nor g4(o4, i1, i2);
+  xor g5(o5, i1, i2);
+  xnor g6(o6, i1, i2);
+  not g7(o7, i1);
+endmodule
+
+
+// Code your testbench here
+// or browse Examples
+module test;
+  reg i1,i2;
+  wire o1,o2,o3,o4,o5,o6,o7;
+  logicgate LGG(o1,o2,o3,o4,o5,o6,o7,i1,i2);
+  initial
+    begin
+      $dumpfile("dump.vcd");
+      $dumpvars(0,test);
+      $monitor($time, "i1=%b, i2=%b, o1=%b, o2=%b, o3=%b, o4=%b, o5=%b, o6=%b, o7=%b", i1,i2,o1,o2,o3,o4,o5,o6,o7);
+      i1=1'b0; i2=1'b0;
+   #5 i1=1'b0; i2=1'b1;
+   #5 i1=1'b1; i2=1'b0;
+   #5 i1=1'b1; i2=1'b1;
     end
 endmodule
