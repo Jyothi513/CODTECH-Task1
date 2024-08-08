@@ -8,7 +8,7 @@ ID:CT6VLSI659
 
 Domain:VLSI
 
-Duration:July to August 2024.
+Duration:June to August 2024.
 
 Mentor:Muzammil Ahmed.
 
